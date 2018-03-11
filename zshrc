@@ -6,6 +6,7 @@ export RUSTFLAGS="-C target-cpu=native"
 # switch to clang
 export CXX=clang++
 export CC=clang
+
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
