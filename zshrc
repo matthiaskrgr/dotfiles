@@ -5,6 +5,10 @@ export PATH=:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
+# rust atom racer autocompletion
+export RUST_SRC_PATH=$HOME/RUST/rust_build/src/
+
+
 #fix rust term detecttion
 export TERM=xterm
 
