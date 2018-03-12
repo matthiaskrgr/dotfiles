@@ -11,14 +11,14 @@ export CC=clang
 ZSH=/usr/share/oh-my-zsh/
 
 # rust atom racer autocompletion
-export RUST_SRC_PATH=$HOME/RUST/rust_build/src/
+export RUST_SRC_PATH=$HOME/RUST/rust-fork/src/
 
 
 #fix rust term detecttion
 export TERM=xterm
 
 # tell less not to paginate if less than a page
-export LESS='-F -r $LESS'
+export LESS='-XFR -f -M $LESS'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
