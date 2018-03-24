@@ -7,6 +7,8 @@ export RUSTFLAGS="-C target-cpu=native"
 # switch to clang
 export CXX=clang++
 export CC=clang
+# ninja build status 
+export NINJA_STATUS="[%p/%f/%r/%t,%e] "
 
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
@@ -95,7 +97,7 @@ plugins=(
 # else
 #   export EDITOR='mvim'
 # fi
-
+export EDITOR=nano
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -111,9 +113,33 @@ plugins=(
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+alias alsamixer='/usr/bin/alsamixer -D hw'
+alias la='ls -a'                # zeige auch versteckte Dateien
+alias lsa='ls -ld .*'            # zeige nur versteckte Dateien
+alias ll="ls -l --group-directories-first" # ls als Liste, Verzeichnisse ganz oben
+alias ls='ls -aF --color=always' # Farbige Liste + Dateiendungen anzeigen
+alias lx='ls -lXB'              # Sortierung nach Endung
+alias lk='ls -lSr'              # Sortierung nach Grösse
+alias lc='ls -lcr'               # Sortierung nach Änderungsdatum
+alias lu='ls -lur'               # Sortierung nach letztem Zugriff
+alias lt='ls -ltr'              # Sortierung nach Datum
+alias lm='ls -al |more'         # ls mit more (scrollbar)
+alias lr='ls -lR |more'         # Rekursive Liste mit more (scrollbar)
+alias lg='ls | grep '           # ls im lokalen Verzeichnis mit grep
+alias mv='nocorrect mv'       # Keine TypoKorrektur
+alias cp='nocorrect cp'       #     ^        ^
+alias mkdir='nocorrect mkdir' #     ^        ^
+
+HISTFILE=~/.histfile
+HISTSIZE=1000000
+SAVEHIST=1000000
+unsetopt autocd
+
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
 source $ZSH/oh-my-zsh.sh
+
