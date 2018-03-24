@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=:$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/LLVM/LLVM6/stage_2/build/bin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 
 export RUSTFLAGS="-C target-cpu=native"
 
@@ -11,8 +12,7 @@ export CC=clang
 ZSH=/usr/share/oh-my-zsh/
 
 # rust atom racer autocompletion
-export RUST_SRC_PATH=$HOME/RUST/rust-fork/src/
-
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 #fix rust term detecttion
 export TERM=xterm
